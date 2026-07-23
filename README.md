@@ -1,5 +1,3 @@
-# Project_SQL: Parks and Recreation Database
-
 # SQL Portfolio: From Basics to Advanced Projects
 
 Welcome to my SQL repository! This project serves as a comprehensive pipeline showcasing my SQL journey, tracking my progression from foundational queries to advanced database programming and full-scale portfolio data projects.
