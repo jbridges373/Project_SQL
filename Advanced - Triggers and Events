@@ -110,11 +110,14 @@ ON: The event scheduler thread is active and running.
 It will scan for scheduled events (like your delete_retirees event in the image) and execute them on time.
 
 OFF: The scheduler is stopped. Existing events are paused and will not run, 
-though you can still create or alter events.DISABLED: The scheduler is completely locked down. 
+though you can still create or alter events.
+
+DISABLED: The scheduler is completely locked down. 
 It cannot be turned on dynamically using SET GLOBAL without restarting the server with a config change.
 
 SET GLOBAL event_scheduler = ON;
 SET GLOBAL event_scheduler = OFF;
+SET GLOBAL event_scheduler = DISABLED;
 
 
 
