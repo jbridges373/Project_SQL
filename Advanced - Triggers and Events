@@ -92,32 +92,33 @@ FROM parks_and_recreation.employee_demographics;
 
 The command SHOW VARIABLES LIKE 'event%'; is used to check the operational status and configuration of the MySQL 
 Event Scheduler.
+
 Here is a detailed breakdown of how it works:
 
 Core Breakdown
 
-SHOW VARIABLES: Instructs MySQL to list its system configuration variables and their current values.
+-- SHOW VARIABLES: Instructs MySQL to list its system configuration variables and their current values.
 
-LIKE: Filters the results so you do not have to scroll through hundreds of system variables.
+-- LIKE: Filters the results so you do not have to scroll through hundreds of system variables.
 
-'event%': The % symbol is a wildcard. It tells MySQL to return any variable whose name begins with the word "event".
+-- 'event%': The % symbol is a wildcard. It tells MySQL to return any variable whose name begins with the word "event".
 
 The Output Variable: event_scheduler
 When you run this command, it primarily checks the event_scheduler system variable, 
 which can have three states:
 
-ON: The event scheduler thread is active and running. 
+-- ON: The event scheduler thread is active and running. 
 It will scan for scheduled events (like your delete_retirees event in the image) and execute them on time.
 
-OFF: The scheduler is stopped. Existing events are paused and will not run, 
+-- OFF: The scheduler is stopped. Existing events are paused and will not run, 
 though you can still create or alter events.
 
-DISABLED: The scheduler is completely locked down. 
+-- DISABLED: The scheduler is completely locked down. 
 It cannot be turned on dynamically using SET GLOBAL without restarting the server with a config change.
 
-SET GLOBAL event_scheduler = ON;
-SET GLOBAL event_scheduler = OFF;
-SET GLOBAL event_scheduler = DISABLED;
+-- SET GLOBAL event_scheduler = ON;
+-- SET GLOBAL event_scheduler = OFF;
+-- SET GLOBAL event_scheduler = DISABLED;
 
 
 
