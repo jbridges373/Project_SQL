@@ -84,7 +84,7 @@ JOIN employee_salary emp2
 	ON emp1.employee_id + 1  = emp2.employee_id
     ;
 
--- So leslie is Ron's secret santa and so on -- Mark Brandanowitz didn't get a secret santa, but he doesn't deserve one because he broke Ann's heart so it's all good
+-- So leslie is Ron's secret santa and so on -- Mark Brandanowitz didn't get a secret santa, but he doesn't deserve one because he broke Ann's heart so it's all good.
 
 
 
