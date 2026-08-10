@@ -12,11 +12,11 @@ FROM world_layoffs.layoffs;
 CREATE TABLE world_layoffs.layoffs_staging 
 LIKE world_layoffs.layoffs;
 
-INSERT layoffs_staging 
+INSERT layoffs_staging
 SELECT * FROM world_layoffs.layoffs;
 
 
--- when we are data cleaning, we usually follow a few steps
+-- When we are data cleaning, we usually follow a few steps
 -- 1. check for duplicates and remove any
 -- 2. standardize data and fix errors
 -- 3. Look at null values and see what 
