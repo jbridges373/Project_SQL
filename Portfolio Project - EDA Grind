@@ -99,5 +99,6 @@ FROM Company_Year_Rank
 WHERE Ranking <= 5
 ;
 
+..
 
 .;
